@@ -11,3 +11,5 @@ ansimate reads in a file containing the frames of the animation formatted as fol
 
 # usage
 use `ansimate [FILE]` to play the file back
+
+the `sprite.ans` file provided is an example in the correct format
