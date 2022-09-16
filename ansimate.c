@@ -45,7 +45,6 @@ char **get_frames(char *file_name) {
   } while ((token = strtok(NULL, "\%")));
 
   frames[i] = "\0";
-
   return (frames);
 }
 
@@ -61,8 +60,6 @@ int main(int argc, char **argv) {
     puts("expected filename: ansimate [FILE]");
     exit(1);
   }
-
-  printf("%s", filename);
 
   char **frames = get_frames(filename);
 
