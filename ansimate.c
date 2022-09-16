@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 
 char *readfile(char *file_name) {
   char *file_contents;
@@ -36,13 +37,13 @@ char **get_frames(char *file_name) {
     frames = (char **)malloc(input_file_size * (sizeof(char)));
     fclose(input_file);
   }
-  token = strtok(framebuf, "\%");
+  token = strtok(framebuf, "%");
 
   int i = 0;
   do {
     frames[i] = token;
     i++;
-  } while ((token = strtok(NULL, "\%")));
+  } while ((token = strtok(NULL, "%")));
 
   frames[i] = "\0";
   return (frames);
